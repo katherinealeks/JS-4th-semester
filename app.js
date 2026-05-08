@@ -1,19 +1,15 @@
-let str = prompt("Введите строку");
+let arr = [
+  [2, 5, 1],
+  [10, -3, 4],
+  [7, 0, 6]
+];
 
-if (str === null) {
-  console.log("! Нет ввода !");
-} else {
-  str = str.trim();
+let sum = 0;
 
-  if (str === "") {
-    console.log("! Введена пустая строка !");
-  } else {
-    let result = "";
-
-    for (let i = str.length - 1; i >= 0; i -= 2) {
-      result += str[i];
-    }
-
-    console.log(result);
+for (let i = 0; i < arr.length; i++) {
+  for (let j = 0; j < arr[i].length; j++) {
+    sum += arr[i][j] ** 2;
   }
 }
+
+console.log("Сумма квадратов элементов массива:", sum);
