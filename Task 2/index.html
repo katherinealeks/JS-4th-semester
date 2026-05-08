@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <div class="icon">👤</div>
+      <h2>Контактная форма</h2>
+    </div>
+
+    <button id="themeBtn" class="theme-btn">🌙 Темная тема</button>
+  </header>
+
+  <div class="container">
+
+    <div class="card">
+      <h3>Личная информация</h3>
+
+      <form id="userForm">
+
+        <label>Фамилия</label>
+        <input type="text" id="lastName" placeholder="Александров">
+
+        <label>Имя</label>
+        <input type="text" id="firstName" placeholder="Александр">
+
+        <label>Электронная почта</label>
+        <input type="email" id="email" placeholder="aleksandrrrrrr@gmail.com">
+
+        <label>Телефон</label>
+        <input type="tel" id="phone" placeholder="+7 901 863 15 17">
+
+        <button type="submit" class="submit-btn">Отправить ➜</button>
+
+      </form>
+
+      <div id="output"></div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
