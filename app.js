@@ -1,12 +1,19 @@
-let userInput = prompt("Введите число");
+let str = prompt("Введите строку");
 
-userInput = userInput.trim();
-
-if (userInput === "" || isNaN(Number(userInput))) {
-  console.log("! Введено не число !");
+if (str === null) {
+  console.log("! Нет ввода !");
 } else {
-  let numberString = userInput.replace("-", "").replace(".", "");
+  str = str.trim();
 
-  console.log("Количество разрядов:", numberString.length);
-  console.log("Первая цифра:", numberString[0]);
+  if (str === "") {
+    console.log("! Введена пустая строка !");
+  } else {
+    let result = "";
+
+    for (let i = str.length - 1; i >= 0; i -= 2) {
+      result += str[i];
+    }
+
+    console.log(result);
+  }
 }
