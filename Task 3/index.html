@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Speed Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="app">
+  <div class="card">
+    <label>Километры в час
+      <div class="row">
+        <input type="number" v-model="kmh" @input="ms = round(kmh / 3.6)" placeholder="0" />
+        <span class="unit">км/ч</span>
+      </div>
+    </label>
+    <label>Метры в секунду
+      <div class="row">
+        <input type="number" v-model="ms" @input="kmh = round(ms * 3.6)" placeholder="0" />
+        <span class="unit">м/с</span>
+      </div>
+    </label>
+  </div>
+</div>
+  
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
